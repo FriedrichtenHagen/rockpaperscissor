@@ -1,14 +1,31 @@
 console.log("Lets play rock paper scissor!");
 
-function consoleTest() {
-    console.log("is this working?");
-}
 
 
 // create function that generates random choice for computer
-// rock, paper, scissor
+// three options: rock, paper, scissor
+function compChoice(){
+    return Math.floor(Math.random()*3);
+}
 
-//function that take input from human (toLowerCase to ensure comparablitiy with CompChoice)
 
-//function that compares CompChoice and HumanChoice
+//function that takes input from human (toLowerCase to ensure comparablitiy with CompChoice)
+function humanChoice(){
+    const val = document.querySelector('input').value;
+    const lowerCaseVal = val.toLowerCase();
+    console.log(lowerCaseVal);
+}
+
+
+
+
+//function that compares compChoice and humanChoice
 //and outputs result
+/*
+if(chompChoice === humanChoice){
+    console.log("It's a draw!");
+}
+else if(compChoice === rock && humanChoice === paper){
+    console.log("Human wins!");
+}
+*/
