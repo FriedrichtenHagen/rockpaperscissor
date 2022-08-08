@@ -35,30 +35,94 @@ function humanChoice(){
 //function that compares compChoice and humanChoice
 //and outputs result
 
+/*
 function evalGame(){
     if(compChoice() === humanChoice()){
-        console.log("It's a draw!");
+        return "It's a draw!";
     }
     else if(compChoice() === "rock" && humanChoice() === "paper"){
-        console.log("Human wins! Paper beats Rock!");
+        return "Human wins! Paper beats Rock!";
     }
     else if(compChoice() === "rock" && humanChoice() === "scissor"){
-        console.log("Computer wins! Rock beats Scissor");
+        return "Computer wins! Rock beats Scissor";
     }
     else if(compChoice() === "paper" && humanChoice() === "rock"){
-        console.log("Comp wins! paper beats rock!");
+        return "Comp wins! paper beats rock!";
     }
     else if(compChoice() === "paper" && humanChoice() === "scissor"){
-        console.log("Human wins! scissor beats paper!");
+        return "Human wins! scissor beats paper!";
     }
     else if(compChoice() === "scissor" && humanChoice() === "paper"){
-        console.log("comp wins! scissor beats paper!");
+        return "comp wins! scissor beats paper!";
     }
     else if(compChoice() === "scissor" && humanChoice() === "rock"){
-        console.log("Human wins! rock beats scissor!");
+        return "Human wins! rock beats scissor!";
     }
     else{
-        console.log("something went horribly wrong...");
+        return "something went horribly wrong...";
     }
 }
+*/
 
+// repeat game 5 times 
+
+function evalGame(){
+    let alertChoice = prompt("Enter your choice");
+    const lowerChoice = alertChoice.toLowerCase();
+    let compChoiceTemp = compChoice();
+
+            if(lowerChoice === compChoiceTemp){
+                return "It's a draw!";
+            }
+            else if(compChoiceTemp === "rock" && lowerChoice === "paper"){
+                return "human wins!" // Paper beats Rock!";
+            }
+            else if(compChoiceTemp === "rock" && lowerChoice === "scissor"){
+                return "comp wins!" //Rock beats Scissor";
+            }
+            else if(compChoiceTemp === "paper" && lowerChoice === "rock"){
+                return "comp wins!" // paper beats rock!";
+            }
+            else if(compChoiceTemp === "paper" && lowerChoice === "scissor"){
+                return "human wins!" // scissor beats paper!";
+            }
+            else if(compChoiceTemp === "scissor" && lowerChoice === "paper"){
+                return "comp wins!" // scissor beats paper!";
+            }
+            else if(compChoiceTemp === "scissor" && lowerChoice === "rock"){
+                return "human wins!" // rock beats scissor!
+            }
+            else{
+                return "something went horribly wrong...";
+            }
+}   
+
+
+
+function fiveGames(){
+    let compScore = 0;
+    let humanScore = 0;
+
+    for(let i=0; i<5; i++){
+        let resultGame = evalGame();
+        console.log(resultGame);
+
+        if(resultGame === "human wins!"){
+            humanScore++;
+        }
+        else if(resultGame === "comp wins"){
+            compScore++;
+        }
+        console.log("human score: " + humanScore +" computer score: "+ compScore);
+       
+    }
+    if(humanScore < compScore){
+        console.log("Computer wins!!!!!!!!!!!!!!!!!!")
+    }
+    else if(compScore < humanScore){
+        console.log("human wins!!!!!!!!!!!!!!!!!!!!!!!1")
+    }
+    else{
+        console.log("It is a draw!!!!!!!!!!!!!!!!!!!!!!!")
+    }
+}
