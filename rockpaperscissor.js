@@ -110,8 +110,11 @@ function fiveGames(){
         if(resultGame === "human wins!"){
             humanScore++;
         }
-        else if(resultGame === "comp wins"){
+        else if(resultGame === "comp wins!"){
             compScore++;
+        }
+        else{
+            
         }
         console.log("human score: " + humanScore +" computer score: "+ compScore);
        
