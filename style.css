@@ -4,6 +4,15 @@ body{
     align-items: center;
     
 }
-h1, input, button{
+h1, button{
     margin: 10px;
+}
+button{
+    padding: 10px;
+    background: rgb(179, 179, 254);
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 100px;
+    cursor:pointer;
+    box-shadow: 1px 1px 1px rgb(187, 185, 242);
 }
