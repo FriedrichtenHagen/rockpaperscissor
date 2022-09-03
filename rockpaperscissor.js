@@ -1,6 +1,3 @@
-console.log("Lets play rock paper scissor!");
-
-
 
 // create function that generates random choice for computer
 // three options: rock, paper, scissor
@@ -32,37 +29,6 @@ function humanChoice(){
 }
 
 
-//function that compares compChoice and humanChoice
-//and outputs result
-
-/*
-function evalGame(){
-    if(compChoice() === humanChoice()){
-        return "It's a draw!";
-    }
-    else if(compChoice() === "rock" && humanChoice() === "paper"){
-        return "Human wins! Paper beats Rock!";
-    }
-    else if(compChoice() === "rock" && humanChoice() === "scissor"){
-        return "Computer wins! Rock beats Scissor";
-    }
-    else if(compChoice() === "paper" && humanChoice() === "rock"){
-        return "Comp wins! paper beats rock!";
-    }
-    else if(compChoice() === "paper" && humanChoice() === "scissor"){
-        return "Human wins! scissor beats paper!";
-    }
-    else if(compChoice() === "scissor" && humanChoice() === "paper"){
-        return "comp wins! scissor beats paper!";
-    }
-    else if(compChoice() === "scissor" && humanChoice() === "rock"){
-        return "Human wins! rock beats scissor!";
-    }
-    else{
-        return "something went horribly wrong...";
-    }
-}
-*/
 
 // repeat game 5 times 
 
